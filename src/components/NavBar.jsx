@@ -3,7 +3,13 @@ import { BellIcon } from "@chakra-ui/icons";
 
 const NavBar = () => {
   return (
-    <Flex as="nav" p="10px" alignItems="center" justify="space-between">
+    <Flex
+      as="nav"
+      p="10px 40px"
+      alignItems="center"
+      justify="space-between"
+      bg="white"
+    >
       <Heading as="h1">Dashboard</Heading>
       <Flex alignItems="center" gap="10px">
         <IconButton
@@ -19,6 +25,7 @@ const NavBar = () => {
         </HStack>
       </Flex>
     </Flex>
+
     // <Flex bg="gray.200" justifyContent="space-between" wrap="wrap" gap="2px">
     //   <Box flexGrow="1" w="100px" h="100px" bg="orange">1</Box>
     //   <Box w="100px" h="100px" bg="blue">2</Box>

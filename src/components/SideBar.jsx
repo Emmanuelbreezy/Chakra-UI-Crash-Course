@@ -18,11 +18,11 @@ import {
   FiLogOut,
   FiSettings,
   FiUser,
-  FiX
+  FiX,
 } from "react-icons/fi";
 
 // eslint-disable-next-line react/prop-types
-const SideBar = ({onClose}) => {
+const SideBar = ({ onClose }) => {
   // const HomeIcon = (props) => (
   //   <Icon viewBox="0 0 20 20" fill="none" {...props}>
   //     <g id="home 1">
@@ -79,7 +79,7 @@ const SideBar = ({onClose}) => {
     a: {
       display: "flex",
       alignItems: "center",
-      p:"10px 10px"
+      p: "10px 10px",
     },
   };
 
@@ -87,7 +87,13 @@ const SideBar = ({onClose}) => {
     <VStack w="full" align="flex-start" spacing={7}>
       <HStack w="full" justify="space-between">
         <Heading fontSize="30px">Tasa.</Heading>
-        <IconButton aria-label="" icon={<FiX />} onClick={onClose} />
+        <IconButton
+          aria-label=""
+          display={{ base: "flex", lg: "none" }}
+          icon={<FiX />}
+          rounded="full"
+          onClick={onClose}
+        />
       </HStack>
       <List sx={itemStyle} w="full" spacing={3}>
         <ListItem>

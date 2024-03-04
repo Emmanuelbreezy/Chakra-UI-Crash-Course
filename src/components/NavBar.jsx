@@ -13,7 +13,7 @@ const NavBar = () => {
       <Heading as="h1">Dashboard</Heading>
       <Flex alignItems="center" gap="10px">
         <IconButton
-          w="auto"
+          variant="ghost"
           aria-label="notification"
           icon={<BellIcon boxSize="20px" />}
         />

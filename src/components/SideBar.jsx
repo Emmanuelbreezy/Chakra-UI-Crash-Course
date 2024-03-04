@@ -75,7 +75,7 @@ const SideBar = ({ onClose }) => {
   });
 
   const itemStyle = {
-    color: "#757575",
+    color: "#fff",
     a: {
       display: "flex",
       alignItems: "center",
@@ -133,7 +133,7 @@ const SideBar = ({ onClose }) => {
             w="full"
             variant="ghost"
             justifyContent="flex-start"
-            color="#757575"
+            color="#fff"
             fontWeight="400"
           >
             <ListIcon as={FiLogOut} />

@@ -13,25 +13,26 @@ import {
   Heading,
   Button,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { FiMessageCircle, FiLink, FiPlus } from "react-icons/fi";
 import { taskData } from "../../data/dumpy";
 
 const Dashboard = () => {
   return (
     <Box w="full">
-      <Box py="18px" flexDir="column" gap="5px">
+      <Box py="15px" flexDir="column" gap="5px">
         <Heading fontSize="28px" fontWeight="500" mb="5px">
           Tasya Wonder Project v3.0
         </Heading>
         <Text fontSize="15px">Created by Emma on March 04 2024</Text>
-        <Button colorScheme="green" leftIcon={<FiPlus />} mt="18px">
+        <Button as={Link} to="/new-task" colorScheme="green" leftIcon={<FiPlus />} mt="18px">
           New Task
         </Button>
       </Box>
 
       {/* {Simple Grid} */}
-      
-      <SimpleGrid py="10px" columns={4} minChildWidth="250px" spacing={5}>
+
+      <SimpleGrid py="20px" columns={4} minChildWidth="250px" spacing={5}>
         {taskData &&
           taskData?.map((task) => (
             <Card key={task.id} bg="white">

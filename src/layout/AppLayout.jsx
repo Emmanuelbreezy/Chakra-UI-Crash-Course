@@ -10,7 +10,7 @@ export default function AppLayout() {
       <GridItem
         as="aside"
         colSpan={{ base: 6, lg: 2, xl: 1 }}
-        bg="white"
+        bg="green.400"
         minH="100vh"
         p="10px 20px"
         w={{base:"250px",lg:"auto"}}
@@ -23,7 +23,7 @@ export default function AppLayout() {
       </GridItem>
       <GridItem as="main" colSpan={{ base: 6, lg: 4, xl: 5 }} bg="#f2f2f2">
         <NavBar onToggle={onToggle} />
-        <Box p="10px 25px">
+        <Box p={{base:"10px 20px", lg:"10px 45px"}}>
           <Outlet />
         </Box>
       </GridItem>

@@ -93,6 +93,7 @@ const SideBar = ({ onClose }) => {
           icon={<FiX />}
           rounded="full"
           onClick={onClose}
+          
         />
       </HStack>
       <List sx={itemStyle} w="full" spacing={3}>

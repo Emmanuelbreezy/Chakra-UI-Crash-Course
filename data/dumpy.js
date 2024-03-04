@@ -129,7 +129,7 @@ export const taskData = [
   },
   {
     id: 9,
-    content: "Optimize SEO for website",
+    content: "Optimize SEO for website for new company branding",
     tag: {
       name: "Digital Marketing",
       color: "#9932CC",

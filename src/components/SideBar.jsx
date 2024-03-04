@@ -93,7 +93,7 @@ const SideBar = ({ onClose }) => {
           icon={<FiX />}
           rounded="full"
           onClick={onClose}
-          
+
         />
       </HStack>
       <List sx={itemStyle} w="full" spacing={3}>
@@ -131,9 +131,9 @@ const SideBar = ({ onClose }) => {
         <ListItem>
           <Button
             w="full"
-            colorScheme="green"
+            variant="ghost"
             justifyContent="flex-start"
-            color="#fff"
+            color="#757575"
             fontWeight="400"
           >
             <ListIcon as={FiLogOut} />

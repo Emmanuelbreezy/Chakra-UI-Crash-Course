@@ -21,6 +21,7 @@ import {
   FiX
 } from "react-icons/fi";
 
+// eslint-disable-next-line react/prop-types
 const SideBar = ({onClose}) => {
   // const HomeIcon = (props) => (
   //   <Icon viewBox="0 0 20 20" fill="none" {...props}>

@@ -5,8 +5,9 @@ import {
   Button,
   Divider,
   VStack,
-  Box,
+  HStack,
   Heading,
+  IconButton,
   //Icon,
 } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
@@ -17,9 +18,10 @@ import {
   FiLogOut,
   FiSettings,
   FiUser,
+  FiX
 } from "react-icons/fi";
 
-const SideBar = () => {
+const SideBar = ({onClose}) => {
   // const HomeIcon = (props) => (
   //   <Icon viewBox="0 0 20 20" fill="none" {...props}>
   //     <g id="home 1">
@@ -82,9 +84,10 @@ const SideBar = () => {
 
   return (
     <VStack w="full" align="flex-start" spacing={7}>
-      <Box>
+      <HStack w="full" justify="space-between">
         <Heading fontSize="30px">Tasa.</Heading>
-      </Box>
+        <IconButton aria-label="" icon={<FiX />} onClick={onClose} />
+      </HStack>
       <List sx={itemStyle} w="full" spacing={3}>
         <ListItem>
           <NavLink to="/">

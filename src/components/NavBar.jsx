@@ -1,16 +1,26 @@
+/* eslint-disable react/prop-types */
 import { Flex, IconButton, Box, Text, HStack, Heading } from "@chakra-ui/react";
 import { BellIcon } from "@chakra-ui/icons";
+import { FiMenu } from "react-icons/fi";
 
-const NavBar = () => {
+const NavBar = ({ onToggle }) => {
   return (
     <Flex
       as="nav"
-      p="10px 40px"
+      p="10px 20px"
       alignItems="center"
-      justify="space-between"
+      justify={{ base: "space-between", lg: "flex-end" }}
       bg="white"
     >
-      <Heading as="h1">Dashboard</Heading>
+      <HStack display={{ base: "flex", lg: "none" }}>
+        <IconButton
+          variant="ghost"
+          aria-label=""
+          icon={<FiMenu />}
+          onClick={onToggle}
+        />
+        <Heading fontSize="30px">Tasa.</Heading>
+      </HStack>
       <Flex alignItems="center" gap="10px">
         <IconButton
           variant="ghost"

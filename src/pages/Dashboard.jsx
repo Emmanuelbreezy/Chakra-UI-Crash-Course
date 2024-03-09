@@ -12,9 +12,12 @@ import {
   Progress,
   Heading,
   Button,
+  Avatar,
+  AvatarGroup,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { FiMessageCircle, FiLink, FiPlus } from "react-icons/fi";
+//import img1 from "../assets/images/img1.jpg";
 import { taskData } from "../../data/dumpy";
 
 const Dashboard = () => {
@@ -25,7 +28,13 @@ const Dashboard = () => {
           Tasya Wonder Project v3.0
         </Heading>
         <Text fontSize="15px">Created by Emma on March 04 2024</Text>
-        <Button as={Link} to="/new-task" colorScheme="green" leftIcon={<FiPlus />} mt="18px">
+        <Button
+          as={Link}
+          to="/new-task"
+          colorScheme="green"
+          leftIcon={<FiPlus />}
+          mt="18px"
+        >
           New Task
         </Button>
       </Box>
@@ -46,7 +55,17 @@ const Dashboard = () => {
                   {task.tag.name}
                 </Tag>
                 <HStack pt="17px" w="full" gap="10px">
-                  <Box>AV</Box>
+                  <AvatarGroup size="sm" max={2}>
+                    {task.assignUsers.map((item, index) => (
+                      <Avatar
+                        key={index}
+                        name={item.name}
+                        src={item.avatarImage}
+                        loading="lazy"
+                        showBorder={true}
+                      />
+                    ))}
+                  </AvatarGroup>
                   <Box flex="1">
                     <Text
                       fontSize="13px"

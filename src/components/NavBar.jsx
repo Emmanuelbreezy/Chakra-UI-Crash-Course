@@ -1,7 +1,16 @@
 /* eslint-disable react/prop-types */
-import { Flex, IconButton, Box, Text, HStack, Heading } from "@chakra-ui/react";
+import {
+  Flex,
+  IconButton,
+  Avatar,
+  AvatarBadge,
+  Text,
+  HStack,
+  Heading,
+} from "@chakra-ui/react";
 import { BellIcon } from "@chakra-ui/icons";
 import { FiMenu } from "react-icons/fi";
+import img1 from "../assets/images/img1.jpg";
 
 const NavBar = ({ onToggle }) => {
   return (
@@ -27,10 +36,12 @@ const NavBar = ({ onToggle }) => {
           aria-label="notification"
           icon={<BellIcon boxSize="20px" />}
         />
-        <HStack alignItems="center" gap="3px">
-          <Box w="auto" bg="gray.200" p="5px">
-            EM
-          </Box>
+        <HStack alignItems="center" gap="4px">
+          <Avatar src={img1} size="sm">
+            <AvatarBadge boxSize="1.25em" bg="green.500">
+              <Text fontSize="8px" color="#fff">2</Text>
+            </AvatarBadge>
+          </Avatar>
           <Text as="span">Techwithemma</Text>
         </HStack>
       </Flex>

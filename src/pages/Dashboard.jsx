@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   SimpleGrid,
   Card,
@@ -14,6 +15,14 @@ import {
   Button,
   Avatar,
   AvatarGroup,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { FiMessageCircle, FiLink, FiPlus } from "react-icons/fi";
@@ -21,6 +30,9 @@ import { FiMessageCircle, FiLink, FiPlus } from "react-icons/fi";
 import { taskData } from "../../data/dumpy";
 
 const Dashboard = () => {
+  const [content, setContent] = useState('');
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Box w="full">
       <Box py="15px" flexDir="column" gap="5px">
@@ -44,7 +56,10 @@ const Dashboard = () => {
       <SimpleGrid py="20px" columns={4} minChildWidth="250px" spacing={5}>
         {taskData &&
           taskData?.map((task) => (
-            <Card key={task.id} bg="white">
+            <Card key={task.id} bg="white" cursor="pointer" onClick={() => {
+              setContent(task.content)
+              onOpen()
+            }}>
               <CardHeader fontWeight="500" pb="0" flex="1">
                 {task.content}
               </CardHeader>
@@ -106,6 +121,26 @@ const Dashboard = () => {
             </Card>
           ))}
       </SimpleGrid>
+
+      <Modal isOpen={isOpen} onClose={onClose} isCentered>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>{content}</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam,
+            est eaque! Vel error nisi laboriosam illum alias itaque possimus
+            consectetur tenetur. Minima libero est possimus quidem unde
+            molestiae praesentium iure!
+          </ModalBody>
+          <ModalFooter>
+            <Button colorScheme="green" mr={3}>
+              Save
+            </Button>
+            <Button onClick={onClose}>Cancel</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </Box>
   );
 };

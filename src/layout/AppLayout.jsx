@@ -6,7 +6,7 @@ import SideBar from "../components/SideBar";
 export default function AppLayout() {
   const {isOpen, onToggle, onClose} = useDisclosure()
   return (
-    <Grid templateColumns="repeat(6, 1fr)">
+    <Grid templateColumns="repeat(6, 1fr)" h="100vh"  overflow="hidden">
       <GridItem
         as="aside"
         colSpan={{ base: 6, lg: 2, xl: 1 }}
@@ -21,9 +21,9 @@ export default function AppLayout() {
       >
         <SideBar onClose={onClose} />
       </GridItem>
-      <GridItem as="main" colSpan={{ base: 6, lg: 4, xl: 5 }} bg="#f2f2f2">
+      <GridItem as="main"  overflowX="hidden" overflowY="auto" colSpan={{ base: 6, lg: 4, xl: 5 }} bg="#f2f2f2">
         <NavBar onToggle={onToggle} />
-        <Box p={{base:"10px 20px", lg:"10px 45px"}}>
+        <Box p={{base:"10px 20px", lg:"10px 45px"}} h="auto">
           <Outlet />
         </Box>
       </GridItem>

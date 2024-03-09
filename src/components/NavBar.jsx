@@ -20,6 +20,9 @@ const NavBar = ({ onToggle }) => {
       alignItems="center"
       justify={{ base: "space-between", lg: "flex-end" }}
       bg="white"
+      pos="sticky"
+      top="0"
+      zIndex="99"
     >
       <HStack display={{ base: "flex", lg: "none" }}>
         <IconButton

@@ -43,7 +43,7 @@ const Dashboard = () => {
         <Button
           as={Link}
           to="/new-task"
-          colorScheme="green"
+          colorScheme="brand"
           leftIcon={<FiPlus />}
           mt="18px"
         >
@@ -66,7 +66,7 @@ const Dashboard = () => {
 
               {/* {card body} */}
               <CardBody py="18px">
-                <Tag colorScheme="green" fontWeight="400" fontSize="13px">
+                <Tag colorScheme="brand" fontWeight="400" fontSize="13px">
                   {task.tag.name}
                 </Tag>
                 <HStack pt="17px" w="full" gap="10px">
@@ -94,7 +94,7 @@ const Dashboard = () => {
                     <Progress
                       size="xs"
                       rounded="full"
-                      colorScheme="green"
+                      colorScheme="brand"
                       value={task.progressPercent}
                     />
                   </Box>
@@ -134,7 +134,7 @@ const Dashboard = () => {
             molestiae praesentium iure!
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="green" mr={3}>
+            <Button colorScheme="brand" mr={3}>
               Save
             </Button>
             <Button onClick={onClose}>Cancel</Button>

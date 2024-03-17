@@ -10,7 +10,7 @@ export default function AppLayout() {
       <GridItem
         as="aside"
         colSpan={{ base: 6, lg: 2, xl: 1 }}
-        bg="brand.400"
+        bg="brand.500"
         minH="100vh"
         p="10px 20px"
         w={{base:"250px",lg:"auto"}}

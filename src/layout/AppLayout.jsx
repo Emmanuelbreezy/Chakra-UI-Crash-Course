@@ -15,9 +15,12 @@ export default function AppLayout() {
         p="10px 20px"
         w={{base:"250px",lg:"auto"}}
         position={{ base: 'absolute', lg: 'static' }}
+        right="0"
+        bottom="0"
         left={{ base: isOpen ? '0' : '-100%', lg: 'auto' }}
         zIndex="99"
         transition="all 0.5s ease-in-out"
+
       >
         <SideBar onClose={onClose} />
       </GridItem>

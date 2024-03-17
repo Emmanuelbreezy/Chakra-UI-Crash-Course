@@ -8,7 +8,7 @@ import {
   Textarea,
   Checkbox,
   Select,
-  Button
+  Button,
 } from "@chakra-ui/react";
 import { Form } from "react-router-dom";
 
@@ -25,6 +25,7 @@ const NewTask = () => {
             type="text"
             name="taskName"
             bg="white"
+            colorScheme="brand"
             placeholder="Enter task name"
           />
           <FormHelperText>Provide a descriptive task name</FormHelperText>
@@ -42,13 +43,15 @@ const NewTask = () => {
         </FormControl>
 
         <FormControl display="flex" alignItems="center" mb="30px">
-          <Checkbox 
-            name="isPriority" 
-            colorScheme="green"
+          <Checkbox
+            name="isPriority"
+            colorScheme="brand"
             size="lg"
             bg="white"
           />
-          <FormLabel mb="0" ml="10px">Make a priority task</FormLabel>
+          <FormLabel mb="0" ml="10px">
+            Make a priority task
+          </FormLabel>
         </FormControl>
 
         <FormControl mb="30px">
@@ -60,8 +63,9 @@ const NewTask = () => {
           <FormHelperText></FormHelperText>
         </FormControl>
 
-        <Button type="submit" colorScheme="green">Submit</Button>
-
+        <Button type="submit" colorScheme="brand">
+          Submit
+        </Button>
       </Form>
     </Box>
   );
